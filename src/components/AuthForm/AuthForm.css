@@ -1,0 +1,47 @@
+:root {
+  --primary-color: #007bff;
+  --danger-color: #dc3545;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  width: 100%;
+
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+  }
+
+  .alert {
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+}
