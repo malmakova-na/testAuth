@@ -37,5 +37,10 @@
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
