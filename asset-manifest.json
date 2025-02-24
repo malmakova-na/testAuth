@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ccd93d8.css",
-    "main.js": "/static/js/main.fd1da688.js",
-    "static/js/453.ed3810f9.chunk.js": "/static/js/453.ed3810f9.chunk.js",
-    "index.html": "/index.html",
-    "main.3ccd93d8.css.map": "/static/css/main.3ccd93d8.css.map",
-    "main.fd1da688.js.map": "/static/js/main.fd1da688.js.map",
-    "453.ed3810f9.chunk.js.map": "/static/js/453.ed3810f9.chunk.js.map"
+    "main.css": "//malmakova-na.github.io/testAuth/static/css/main.3ccd93d8.css",
+    "main.js": "//malmakova-na.github.io/testAuth/static/js/main.a76eba8b.js",
+    "static/js/453.ed3810f9.chunk.js": "//malmakova-na.github.io/testAuth/static/js/453.ed3810f9.chunk.js",
+    "index.html": "//malmakova-na.github.io/testAuth/index.html",
+    "main.3ccd93d8.css.map": "//malmakova-na.github.io/testAuth/static/css/main.3ccd93d8.css.map",
+    "main.a76eba8b.js.map": "//malmakova-na.github.io/testAuth/static/js/main.a76eba8b.js.map",
+    "453.ed3810f9.chunk.js.map": "//malmakova-na.github.io/testAuth/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3ccd93d8.css",
-    "static/js/main.fd1da688.js"
+    "static/js/main.a76eba8b.js"
   ]
 }
