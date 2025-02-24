@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/testAuth/static/css/main.3ccd93d8.css",
+    "main.js": "/testAuth/static/js/main.cc68ae91.js",
+    "static/js/453.ed3810f9.chunk.js": "/testAuth/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/testAuth/index.html",
+    "main.3ccd93d8.css.map": "/testAuth/static/css/main.3ccd93d8.css.map",
+    "main.cc68ae91.js.map": "/testAuth/static/js/main.cc68ae91.js.map",
+    "453.ed3810f9.chunk.js.map": "/testAuth/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ccd93d8.css",
+    "static/js/main.cc68ae91.js"
+  ]
+}
