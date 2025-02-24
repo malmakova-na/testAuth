@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../authSlice";
 import "./AuthForm.css";
 const AuthForm: React.FC = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-
   async function mockLoginRequest(
     email: string,
     password: string
@@ -24,15 +28,20 @@ const AuthForm: React.FC = () => {
     e.preventDefault();
     try {
       setErrorMsg("");
-      const response = await mockLoginRequest(email, password);
-      alert(response.message);
+      await mockLoginRequest(email, password);
+      dispatch(login(email));
+      navigate("/dashboard");
     } catch (error) {
-      setErrorMsg("Something went wrong");
+      if (error && typeof error === "object" && "message" in error) {
+        setErrorMsg((error as { message: string }).message);
+      } else {
+        setErrorMsg("Something went wrong");
+      }
     }
   };
   return (
     <form onSubmit={handleSubmit} className="auth-form">
-      <h1 className="auth-form__title">Sign in</h1>
+      <h1 className="auth-form__title">Log in</h1>
 
       <label htmlFor="email">Email address</label>
       <input
@@ -52,18 +61,15 @@ const AuthForm: React.FC = () => {
         type="password"
         autoComplete="current-password"
         required
-        minLength={6}
+        minLength={4}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      {errorMsg && (
-        <p role="alert" className="alert">
-          {errorMsg}
-        </p>
-      )}
-
-      <button type="submit">Log in</button>
+      <button type="submit">{"Log In"}</button>
+      <p role="alert" className="alert">
+        {errorMsg ? errorMsg : ""}
+      </p>
     </form>
   );
 };
