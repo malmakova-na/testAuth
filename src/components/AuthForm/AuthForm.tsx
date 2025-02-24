@@ -9,6 +9,7 @@ const AuthForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   async function mockLoginRequest(
     email: string,
     password: string
@@ -26,6 +27,7 @@ const AuthForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     try {
       setErrorMsg("");
       await mockLoginRequest(email, password);
@@ -38,6 +40,7 @@ const AuthForm: React.FC = () => {
         setErrorMsg("Something went wrong");
       }
     }
+    setIsSubmitting(false);
   };
   return (
     <form onSubmit={handleSubmit} className="auth-form">
@@ -66,7 +69,9 @@ const AuthForm: React.FC = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button type="submit">{"Log In"}</button>
+      <button type="submit" disabled={isSubmitting}>
+        {"Log In"}
+      </button>
       <p role="alert" className="alert">
         {errorMsg ? errorMsg : ""}
       </p>

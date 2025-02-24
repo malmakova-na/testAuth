@@ -22,7 +22,6 @@
     border: 1px solid #ccc;
 
     &:focus {
-      outline: none;
       border-color: var(--primary-color);
     }
   }
